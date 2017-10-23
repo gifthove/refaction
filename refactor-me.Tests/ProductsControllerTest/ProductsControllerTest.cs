@@ -75,7 +75,7 @@ namespace refactor_me.Tests
 
             var productOptionService = new ProductOptionService(productOptionRepository);
             var productService = new ProductService(productRepository);
-            _Controller = new ProductsController(productService, productOptionService);
+            _Controller = new ProductsController(productService, productOptionService,_logging);
         }
 
         /// <summary>

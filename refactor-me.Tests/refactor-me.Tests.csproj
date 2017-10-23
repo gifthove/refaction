@@ -104,7 +104,9 @@
     <Compile Include="RepositoriesTest\ProductRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ServiceTest\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\refactor-me.appservices\refactor-me.appservices.csproj">
       <Project>{6E5FBE99-014A-4C1D-9069-F6F06F513200}</Project>

@@ -33,12 +33,8 @@
             // UNITY DI
             var container = new UnityContainer();
             container.RegisterInstance<IMapper>(mapperConfig.CreateMapper());
-            //container.AddNewExtension<NLogExtension<LoggingService>>();
-            //container.AddNewExtension<NLogExtension<LoggingService>>();
             container.RegisterType<ILoggingService, LoggingService>();
-
             container.RegisterType<IDatabaseEntities, DatabaseEntities>(new PerThreadLifetimeManager());
-
             container.RegisterType<DbContext, DatabaseEntities>(new PerThreadLifetimeManager());
             container.RegisterType<IProductRepository, ProductRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IProductOptionRepository, ProductOptionRepository>(new HierarchicalLifetimeManager());
