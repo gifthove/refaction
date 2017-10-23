@@ -33,6 +33,10 @@
             // UNITY DI
             var container = new UnityContainer();
             container.RegisterInstance<IMapper>(mapperConfig.CreateMapper());
+            //container.AddNewExtension<NLogExtension<LoggingService>>();
+            //container.AddNewExtension<NLogExtension<LoggingService>>();
+            container.RegisterType<ILoggingService, LoggingService>();
+
             container.RegisterType<IDatabaseEntities, DatabaseEntities>(new PerThreadLifetimeManager());
 
             container.RegisterType<DbContext, DatabaseEntities>(new PerThreadLifetimeManager());
@@ -40,7 +44,6 @@
             container.RegisterType<IProductOptionRepository, ProductOptionRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IProductService, ProductService>(new HierarchicalLifetimeManager());
             container.RegisterType<IProductOptionService, ProductOptionService>(new HierarchicalLifetimeManager());
-            container.AddNewExtension<NLogExtension<LoggingService>>();
             config.DependencyResolver = new UnityResolver(container);
 
             // Web API configuration and services

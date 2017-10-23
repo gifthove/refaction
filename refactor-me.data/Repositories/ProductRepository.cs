@@ -90,7 +90,7 @@
         /// </summary>
         /// <returns>IEnumerable&lt;Models.Product&gt;.</returns>
         public IEnumerable<Models.Product> GetAll()
-        {
+        {   
             try
             {
                 var entities = _dbContext.Products.AsNoTracking();
