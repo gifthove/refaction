@@ -94,7 +94,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
     <EntityDeploy Include="refactor-me.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
