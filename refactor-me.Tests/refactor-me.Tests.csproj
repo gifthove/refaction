@@ -103,10 +103,10 @@
     <Compile Include="RepositoriesTest\ProductOptionRepositoryTest.cs" />
     <Compile Include="RepositoriesTest\ProductRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTest\ProductOptionServiceTest.cs" />
+    <Compile Include="ServiceTest\ProductServiceTest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ServiceTest\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\refactor-me.appservices\refactor-me.appservices.csproj">
       <Project>{6E5FBE99-014A-4C1D-9069-F6F06F513200}</Project>

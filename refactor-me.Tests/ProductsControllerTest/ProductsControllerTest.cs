@@ -142,5 +142,25 @@ namespace refactor_me.Tests
             Assert.AreEqual(products.Items.Count, 3);
 
         }
+
+        /// <summary>
+        /// Updates the update a product via service.
+        /// </summary>
+        [TestMethod]
+        public void Update_update_a_Product_via_service()
+        {
+            //Arrange 
+            var product = _Controller.GetProduct(new Guid("8f2e9176-35ee-4f0a-ae55-83023d2db1a3"));
+            product.Name = "Testing MockTest";
+
+            //Act 
+            _Controller.Update(new Guid("8f2e9176-35ee-4f0a-ae55-83023d2db1a3"), product);
+            var updatedproduct = _Controller.GetProduct(new Guid("8f2e9176-35ee-4f0a-ae55-83023d2db1a3"));
+
+            //Assert
+            Assert.IsNotNull(updatedproduct);
+            Assert.AreEqual(updatedproduct.Name, "Testing MockTest");
+
+        }
     }
 }
